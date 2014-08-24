@@ -61,7 +61,7 @@
 				containerAspect = containerW/containerH;
 
 			if (settings.container.is($('body'))) {
-				$('html,body').css('height',$(window).height() > $('body').css('height','auto').height() ? '100%' : 'auto');
+				$('html,body').css('height',$(window).height() > $('body').css('height','auto').height() ? '120%' : 'auto');
 			}
 
 			if (containerAspect < mediaAspect) {
@@ -293,7 +293,7 @@
 
 				$('#big-video-vid_flash_api')
 					.attr('scale','noborder')
-					.attr('width','100%')
+					.attr('width','120%')
 					.attr('height','100%');
 
 				// set events
