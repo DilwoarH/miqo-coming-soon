@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Miqo - Coming Soon</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="./assets/lib/jquery.js"></script>
+	<script type="text/javascript" src="./assets/lib/video.js"></script>
+	<script type="text/javascript" src="./assets/lib/bigvideo.js"></script>
+	<script type="text/javascript" src="./assets/lib/jquery-ui.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/video-js.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/bigvideo.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+
+	<script type="text/javascript">
+		$(function() {
+		    var BV = new $.BigVideo({useFlashForFirefox:false});
+			BV.init();
+		    BV.show('./assets/video/holifestivalvideo.mp4',{
+		    	//ambient:true,
+		    	doLoop:true
+		    });
+		
+			$('body').on({
+			'mousewheel': function(e) {
+			    if (e.target.id == 'el') return;
+			    e.preventDefault();
+			    e.stopPropagation();
+			    }
+			});
+		    
+		});
+
+	</script>
+</head>
+<body>
+	<div class="main">
+        <p class="h1">Miqo</p>
+        <p class="h2">Coming Soon.</p>
+    </div>
+    <div id="bgvideo"></div>
+</body>
+</html>
